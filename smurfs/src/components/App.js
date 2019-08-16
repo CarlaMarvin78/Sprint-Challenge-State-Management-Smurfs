@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import {connect} from'react-redux';
 import {getSmurfs, addSmurf} from '../actions';
+import Form from './Form';
 
 
 const App = (props) => {
@@ -17,6 +18,7 @@ const App = (props) => {
     <div className="App">
       <h1>SMURFS! 2.0 W/ Redux</h1>
 {props.smurfs.map(smurf=><div key={smurf.id}>Name: {smurf.name} Age: {smurf.age} Height:{smurf.height}</div>)}
+<Form addSmurf={addSmurf} />
     </div>
   );
 }
