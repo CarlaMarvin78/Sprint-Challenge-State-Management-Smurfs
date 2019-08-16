@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+import {connect} from'react-redux';
+import {getSmurfs} from './actions';
+
+
 class App extends Component {
   render() {
     return (
