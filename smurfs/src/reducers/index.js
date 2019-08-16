@@ -6,7 +6,7 @@ const initialState = {
 
 }
 
-export default (state=initiaState, action) => {
+export default (state=initialState, action) => {
     switch (action.type) {
         case GET_SMURF:
             return {
