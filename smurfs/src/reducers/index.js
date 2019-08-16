@@ -1,4 +1,4 @@
-import {GET_SMURF, ADD_SMURF} from '../actions';
+import {GET_SMURF} from '../actions';
 
 const initialState = {
     smurfs: [],
@@ -14,11 +14,6 @@ export default (state=initialState, action) => {
                 smurfs: action.payload,
                 loaded: true
             };
-        case ADD_SMURF: 
-        return {
-            ...state,
-            smurfs: [...state.smurfs, action.payload]
-        };
         default:
             return state;
     }

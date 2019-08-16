@@ -8,9 +8,10 @@ export default function ({addSmurf}) {
     }
     const handleSubmit = function(event){
         event.preventDefault();
-        console.log(smurf);
-        addSmurf(smurf);
-        setSmurf({});
+        if(smurf.name && smurf.age && smurf.height) {
+            addSmurf(smurf);
+            setSmurf({name:'', age:'', height:''});
+        }
     }
     return (<form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Smurf Name" value={smurf.name} onChange={handleChange} />
